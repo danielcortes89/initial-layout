@@ -1,5 +1,24 @@
 import logo from './logo.svg';
+
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+
 import './App.css';
+
+const Home = () => {
+  return (
+    <div>
+      <h2>This is the Homepage</h2>
+    </div>
+  )
+}
+
+const About = () => {
+  return (
+    <div>
+      <h3>This is the about Page</h3>
+    </div>
+  )
+}
 
 function App() {
   return (
@@ -17,8 +36,12 @@ function App() {
         >
           Learn React
         </a> */}
-        <h2>TEST</h2>
+        
       </header>
+      <Router>
+        <Route path="/" exact component={Home}/>
+        <Route path="/about" component={About}/>
+      </Router>
     </div>
   );
 }
