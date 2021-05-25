@@ -11,3 +11,13 @@ section {
 section h2 {
     margin: 0;
 }
+
+section div {
+    /* text-decoration: none; */
+}
+
+.link-wrapper  a {
+    /* background: blue; */
+    margin: 0 5px;
+    text-decoration: none;
+}

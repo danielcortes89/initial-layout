@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <section>
             <div>The Navbar</div>
-            <div>
+            <div className="link-wrapper">
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/about">About</NavLink>
                 <NavLink to="/login">Login</NavLink>
