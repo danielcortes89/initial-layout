@@ -6,6 +6,7 @@ import Home from './components/HomeComponent'
 import About from './components/AboutComponent'
 
 import Navbar from './components/utilities/Navbar'
+import Footer from './components/utilities/Footer'
 
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" component={Login}/>
           <Route path="/register" component={Register}/>
         </Switch>
+        <Footer />
       </Router>
     </div>
   );
