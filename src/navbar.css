@@ -1,4 +1,4 @@
-section {
+.navbar-comp {
     margin: 0;
     /* width: 100%; */
     background: black;
@@ -8,16 +8,15 @@ section {
     justify-content: space-between;
 }
 
-section h2 {
+.navbar-comp h2 {
     margin: 0;
 }
 
-section div {
+.navbar-comp div {
     /* text-decoration: none; */
 }
 
-.link-wrapper  a {
-    /* background: blue; */
+.navbar-comp .link-wrapper  a {
     margin: 0 5px;
     text-decoration: none;
 }
