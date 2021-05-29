@@ -1,0 +1,14 @@
+.center-content {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.small-content {
+    height: 80vh;
+}
+
+@media screen and (min-width: 1200px){
+    .center-content {
+        max-width: 70%;
+    }
+}
