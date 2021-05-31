@@ -22,7 +22,7 @@ function App() {
           <Route path="/about" component={About}/>
           <Route path="/login" component={Login}/>
           <Route path="/register" component={Register}/>
-          <Route path="resources"/>
+          <Route path="/resources" component={Resources}/>
         </Switch>
         <Footer />
       </Router>
