@@ -4,10 +4,12 @@ class AdditionalResourceComponent extends Component {
     constructor(props){
         super(props)
         this.state = {
+            askOpen: true,
             numQues: ""
         }
 
         this.handleInput = this.handleInput.bind(this)
+        this.submitAsk = this.submitAsk.bind(this)
     }
 
     handleInput(event){
@@ -17,6 +19,12 @@ class AdditionalResourceComponent extends Component {
         })
 
         console.log(this.state.numQues)
+    }
+
+    submitAsk(event){
+        this.setState({
+            askOpen: !this.state.askOpen
+        })
     }
     // componentDidMount(){
     //     let howMany =  ""
@@ -38,18 +46,23 @@ class AdditionalResourceComponent extends Component {
 
     render() {
         return (
-            <div>
+            <div className="center-content">
                 <h3>Additional resources</h3>
-                <form>
-                    <label htmlFor="numQues">How many Questions?</label>
-                    <input 
-                        value={this.state.numQues} 
-                        name="numQues" 
-                        id="numQues" 
-                        type="text"
-                        onChange={this.handleInput}
-                    />
+                {this.state.askOpen &&
+                <form onSubmit={this.submitAsk}>
+                    <div>
+                        <label htmlFor="numQues">How many Questions?</label>
+                        <input 
+                            value={this.state.numQues} 
+                            name="numQues" 
+                            id="numQues" 
+                            type="text"
+                            onChange={this.handleInput}
+                        />
+                    </div>
+                    <input type="submit"/>
                 </form>
+                }       
             </div>
         )
     }
