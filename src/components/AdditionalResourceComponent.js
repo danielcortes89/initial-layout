@@ -62,7 +62,18 @@ class AdditionalResourceComponent extends Component {
                     </div>
                     <input type="submit"/>
                 </form>
-                }       
+                }
+                {!this.state.askOpen &&
+                    <div>
+                        <h2>This is the form for the questions and such</h2>
+                        <ul>
+                            <li>Have it generate based on the number they submit above</li>
+                            <li>All must have values based on number of questions</li>
+                            <li>Button to submit</li>
+                        </ul>
+                        <button onClick={this.submitAsk}>Submit Here</button>
+                    </div>
+                }    
             </div>
         )
     }
